@@ -200,6 +200,7 @@ body {
     flex-direction: column-reverse;
     padding: 0rem;
     border-radius: 0;
+    height: 100vh;
     width: 100vw;
   }
 
