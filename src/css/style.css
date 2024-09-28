@@ -200,6 +200,7 @@ body {
     flex-direction: column-reverse;
     padding: 0rem;
     border-radius: 0;
+    width: 100vw;
   }
 
   .scard__mimg {
