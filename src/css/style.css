@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+}
+
+body {
+  background-color: var(--Charcoal-Grey);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scard {
+  background-color: var(--White);
+  display: flex;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.scard__text {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.scard__heading {
+  font-weight: var(--font-weight-700);
+  padding-top: 1rem;
+  color: var(--Dark-Slate-Grey);
+  font-size: 3em;
+}
+
+.scard__para {
+  padding: 1rem 0;
+  max-width: 45ch;
+  min-width: 30ch;
+  color: var(--Charcoal-Grey);
+  font-size: 14px;
+}
+
+.scard__li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0.5rem 0;
+  color: var(--Charcoal-Grey);
+  font-size: 14px;
+}
+
+.scard__liimg {
+  padding-right: 1rem;
+}
+
+.scard__mail {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.scard__labels {
+  padding: 0.5rem 0;
+  font-size: 12px;
+  font-weight: var(--font-weight-700);
+  display: flex;
+  justify-content: space-between;
+}
+
+.scard__maillabel {
+  color: var(--Dark-Slate-Grey);
+}
+
+.scard__mailerror {
+  display: none;
+  margin-right: 1.5rem;
+  color: var(--Tomato);
+}
+
+.scard__mailbox {
+  border: 1px var(--Grey) solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-right: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  font-size: 16px;
+}
+
+.scard__mailbox:hover,
+.scard__mailbox:focus {
+  border: 1px var(--Dark-Slate-Grey) solid;
+}
+
+.scard__mailbox:focus {
+  cursor: text;
+}
+
+.scard__button {
+  border: none;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 1rem 0;
+  color: var(--White);
+  background-color: var(--Dark-Slate-Grey);
+  border-radius: 0.5rem;
+  font-weight: var(--font-weight-700);
+  cursor: pointer;
+}
+
+.scard__button--hover:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(342, 100%, 67%),
+    hsl(24, 100%, 67%)
+  );
+}
+
+.scard__dimg {
+  width: 21rem;
+}
+
+.scard__img--mobile {
+  display: none;
+}
+
+.mcard {
+  display: none;
+  flex-direction: column;
+  background-color: var(--White);
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+}
+
+.mcard__img {
+  width: 3rem;
+}
+
+.mcard__heading {
+  width: 10ch;
+  font-weight: var(--font-weight-700);
+  padding-top: 1.5rem;
+  color: var(--Dark-Slate-Grey);
+  font-size: 3em;
+  line-height: 3rem;
+}
+
+.mcard__para {
+  width: 40ch;
+  padding: 1rem 0;
+  color: var(--Charcoal-Grey);
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.mcard__email {
+  color: var(--Dark-Slate-Grey);
+}
+
+.mcard__button {
+  margin: 1rem 0;
+  padding: 1rem 7rem;
+  border: none;
+  color: var(--White);
+  background-color: var(--Dark-Slate-Grey);
+  border-radius: 0.5rem;
+  font-weight: var(--font-weight-700);
+  cursor: pointer;
+}
+
+.mcard__button--hover:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(342, 100%, 67%),
+    hsl(24, 100%, 67%)
+  );
+}
+
+@media (max-width: 500px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scard {
+    flex-direction: column-reverse;
+    padding: 0rem;
+    border-radius: 0;
+  }
+
+  .scard__mimg {
+    display: block;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .scard__img--desktop {
+    display: none;
+  }
+
+  .scard__text {
+    padding: 1.5rem;
+  }
+
+  .scard__heading {
+    font-size: 2.2em;
+  }
+
+  .scard__para {
+    width: 35ch;
+  }
+
+  .scard__li {
+    width: 35ch;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .scard__liimg {
+    width: 2rem;
+  }
+
+  .scard__mailerror {
+    margin-right: 0;
+  }
+
+  .scard__mailbox {
+    margin-right: 0;
+  }
+
+  .scard__button {
+    margin-right: 0;
+  }
+
+  .mcard {
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    padding: 1.5rem;
+    border-radius: 0;
+  }
+
+  .mcard__text {
+    position: relative;
+    top: 5rem;
+  }
+
+  .mcard__heading {
+    font-size: 2.2em;
+    line-height: 2.5rem;
+  }
+
+  .mcard__para {
+    width: 35ch;
+  }
+
+  .mcard__button {
+    padding: 1rem;
+  }
+}
